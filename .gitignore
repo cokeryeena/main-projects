@@ -1,0 +1,19 @@
+# Ignore SSH keys
+.ssh/
+
+# Ignore AWS credentials
+.aws/
+
+# Ignore Terraform state and cache
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Ignore OS and IDE files
+*.swp
+*.DS_Store
+*.vscode/
+*.idea/
+
+# Docker build files
+.docker/
