@@ -48,5 +48,6 @@ The goal is to show **automated scaling, load balancing, and containerized deplo
 
 ## Web App Access
 Access the running Flask app via the ALB DNS:(http://flask-webapp-alb-977142466.us-east-1.elb.amazonaws.com/)
-(images/alb-dns.png)
+![Flask App Running DNS](images/alb-dns.png)
+
 
