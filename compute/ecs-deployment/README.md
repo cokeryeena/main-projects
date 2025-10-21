@@ -60,15 +60,18 @@ Your app becomes accessible publicly through the ALB DNS name once deployed.
 
 ---
 
+
+## Screenshots
+
+![ALB Browser](screenshots/alb-browser.png)
+![ECS Cluster](screenshots/ecs-cluster.png)
+![Terraform Apply](screenshots/terraform-apply.png)
+
+
 ## Setup Instructions
 
 ### Clone the Repository
 ```bash
 git clone https://github.com/cokeryeena/main-projects.git
 cd main-projects/compute/ecs-deployment/terraform
-
-## Screenshots
-![ALB Browser](screenshots/alb-browser.png)
-![ECS Cluster](screenshots/ecs-cluster.png)
-![Terraform Apply](screenshots/terraform-apply.png)
 
