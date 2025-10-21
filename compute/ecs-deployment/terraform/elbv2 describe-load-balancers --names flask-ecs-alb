@@ -1,0 +1,62 @@
+{
+    "NetworkInterfaces": [
+        {
+            "Association": {
+                "IpOwnerId": "amazon-elb",
+                "PublicDnsName": "ec2-98-83-17-171.compute-1.amazonaws.com",
+                "PublicIp": "98.83.17.171"
+            },
+            "Attachment": {
+                "AttachTime": "2025-10-05T00:59:40+00:00",
+                "AttachmentId": "eni-attach-0d672a4bedd6626f4",
+                "DeleteOnTermination": false,
+                "DeviceIndex": 1,
+                "NetworkCardIndex": 0,
+                "InstanceOwnerId": "amazon-elb",
+                "Status": "attached"
+            },
+            "AvailabilityZone": "us-east-1b",
+            "Description": "ELB app/flask-ecs-alb/28932b529879ff04",
+            "Groups": [
+                {
+                    "GroupId": "sg-0722a9a4a3607f408",
+                    "GroupName": "flask-ecs-alb-sg"
+                }
+            ],
+            "InterfaceType": "interface",
+            "Ipv6Addresses": [],
+            "MacAddress": "02:9b:44:e3:9e:23",
+            "NetworkInterfaceId": "eni-077b02f3a25d7ad47",
+            "OwnerId": "913617601626",
+            "PrivateDnsName": "ip-172-31-4-243.ec2.internal",
+            "PublicDnsName": "ec2-98-83-17-171.compute-1.amazonaws.com",
+            "PublicIpDnsNameOptions": {
+                "DnsHostnameType": "public-ipv4-dns-name",
+                "PublicIpv4DnsName": "ec2-98-83-17-171.compute-1.amazonaws.com"
+            },
+            "PrivateIpAddress": "172.31.4.243",
+            "PrivateIpAddresses": [
+                {
+                    "Association": {
+                        "IpOwnerId": "amazon-elb",
+                        "PublicDnsName": "ec2-98-83-17-171.compute-1.amazonaws.com",
+                        "PublicIp": "98.83.17.171"
+                    },
+                    "Primary": true,
+                    "PrivateDnsName": "ip-172-31-4-243.ec2.internal",
+                    "PrivateIpAddress": "172.31.4.243"
+                }
+            ],
+            "RequesterId": "amazon-elb",
+            "RequesterManaged": true,
+            "SourceDestCheck": true,
+            "Status": "in-use",
+            "SubnetId": "subnet-0fc085fde3fb8cbe1",
+            "TagSet": [],
+            "VpcId": "vpc-00c24b7f87cb3a49b",
+            "Operator": {
+                "Managed": false
+            }
+        }
+    ]
+}
