@@ -15,13 +15,7 @@ This project demonstrates a **serverless compute workflow** using AWS Lambda, tr
 3. Lambda resizes image
 4. Output saved in **Destination Bucket**
 
-## Deployment
-```bash
-cd terraform
-terraform init
-terraform apply
-
 ## Screenshots
-- [Lambda Apply](screenshots/lambda-apply)
-- [S3 Bucket](screenshots/s3-bucket)
-- [Lambda Function](screenshots/lambda-function)
+- [Lambda Apply](screenshots/lambda-apply.png)
+- [S3 Bucket](screenshots/lambda-s3-bucket.png)
+- [Lambda Function](screenshots/lambda-function.png)
