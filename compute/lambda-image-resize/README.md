@@ -16,6 +16,11 @@ This project demonstrates a **serverless compute workflow** using AWS Lambda, tr
 4. Output saved in **Destination Bucket**
 
 ## Screenshots
-- [Lambda Apply](screenshots/lambda-apply.png)
-- [S3 Bucket](screenshots/lambda-s3-bucket.png)
-- [Lambda Function](screenshots/lambda-function.png)
+**Terraform Apply**
+![Lambda Apply](screenshots/lambda-apply.png)
+
+**S3 Bucket**
+![S3 Bucket](screenshots/lambda-s3-bucket.png)
+
+**Lambda Function**
+![Lambda Function](screenshots/lambda-function.png)
