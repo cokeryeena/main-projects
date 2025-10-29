@@ -4,21 +4,18 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 913617601626.dkr.ecr.us-east-1.amazonaws.com
-
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPO_URI
+      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
   build:
     commands:
       - echo Building the Docker image...
-      - cd compute/cicd-pipeline       # 👈 change into correct directory
-      - docker build -t my-ecs-repo .
-
+      - docker build -t $REPO_URI:$IMAGE_TAG .
+      - docker tag $REPO_URI:$IMAGE_TAG $REPO_URI:latest
   post_build:
     commands:
-      - echo Pushing the Docker image...
-      - docker tag my-ecs-repo:latest 913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest
-      - docker push 913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest
-      - echo Writing image definitions file...
-      - printf '[{"name":"my-container","imageUri":"913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest"}]' > imagedefinitions.json
-
+      - echo Pushing Docker images...
+      - docker push $REPO_URI:$IMAGE_TAG
+      - docker push $REPO_URI:latest
+      - printf '[{"name":"my-app-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
