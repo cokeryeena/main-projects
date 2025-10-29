@@ -9,16 +9,16 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
+      - cd compute/cicd-pipeline       # 👈 change into correct directory
       - docker build -t my-ecs-repo .
-      - docker tag my-ecs-repo:latest 913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest
 
   post_build:
     commands:
       - echo Pushing the Docker image...
+      - docker tag my-ecs-repo:latest 913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest
       - docker push 913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest
-      - echo Creating imagedefinitions.json file...
+      - echo Writing image definitions file...
       - printf '[{"name":"my-container","imageUri":"913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo:latest"}]' > imagedefinitions.json
 
 artifacts:
-  files:
-    - imagedefinitions.json
+  files: imagedefinitions.json
