@@ -2,7 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-# --- S3 Buckets ---
+# S3 Buckets
 resource "aws_s3_bucket" "source_bucket" {
   bucket = "lambda-image-source-bucket-${random_id.suffix.hex}"
   force_destroy = true
@@ -17,7 +17,7 @@ resource "random_id" "suffix" {
   byte_length = 4
 }
 
-# --- IAM Role for Lambda ---
+# IAM Role for Lambda
 resource "aws_iam_role" "lambda_role" {
   name = "lambda_image_resize_role"
 
@@ -43,7 +43,7 @@ resource "aws_iam_role_policy_attachment" "lambda_s3_access" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
 }
 
-# --- Lambda Function ---
+# Lambda Function
 data "archive_file" "lambda_zip" {
   type        = "zip"
   source_dir  = "../lambda"
@@ -63,7 +63,7 @@ resource "aws_lambda_function" "image_resizer" {
   }
 }
 
-# --- S3 Event Notification ---
+# S3 Event Notification
 resource "aws_s3_bucket_notification" "bucket_notify" {
   bucket = aws_s3_bucket.source_bucket.id
 
@@ -75,7 +75,7 @@ resource "aws_s3_bucket_notification" "bucket_notify" {
   depends_on = [aws_lambda_permission.allow_s3]
 }
 
-# --- Lambda Permission for S3 Trigger ---
+# Lambda Permission for S3 Trigger
 resource "aws_lambda_permission" "allow_s3" {
   statement_id  = "AllowS3Invoke"
   action        = "lambda:InvokeFunction"
