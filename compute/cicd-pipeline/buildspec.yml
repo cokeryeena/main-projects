@@ -19,4 +19,5 @@ phases:
       - docker push $REPO_URI:latest
       - printf '[{"name":"my-app-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
-  files: imagedefinitions.json
+  files:
+    - imagedefinitions.json
