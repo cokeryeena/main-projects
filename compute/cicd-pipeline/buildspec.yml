@@ -3,28 +3,22 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo "Logging in to Amazon ECR..."
+      - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPO_URI
-      - echo "Setting image tag..."
-      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
-      - echo "Image tag: $IMAGE_TAG"
-
   build:
     commands:
-      - echo "Starting Docker build..."
-      - echo "Current directory: $(pwd)"
-      - echo "Listing files in repo..."
-      - ls -R
-      - echo "Building Docker image from main-projects/compute/cicd-pipeline..."
-      - docker build -t $REPO_URI:$IMAGE_TAG -f main-projects/compute/cicd-pipeline/Dockerfile main-projects/compute/cicd-pipeline
-
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $REPO_URI:$IMAGE_TAG .
+      - docker tag $REPO_URI:$IMAGE_TAG $REPO_URI:latest
   post_build:
     commands:
-      - echo "Pushing Docker image to ECR..."
+      - echo Build completed on `date`
+      - echo Pushing Docker images...
       - docker push $REPO_URI:$IMAGE_TAG
-      - echo "Writing imagedefinitions.json..."
+      - docker push $REPO_URI:latest
+      - echo Writing image definitions file...
       - printf '[{"name":"my-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
-      - cat imagedefinitions.json
 
 artifacts:
   files:
