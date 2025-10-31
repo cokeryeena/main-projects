@@ -22,7 +22,9 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"my-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json
+      - ls -al
 
 artifacts:
   files:
     - imagedefinitions.json
+discard-paths: yes
