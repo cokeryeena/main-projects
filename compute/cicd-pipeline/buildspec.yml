@@ -1,6 +1,7 @@
 version: 0.2
 
 env:
+  shell: bash
   variables:
     AWS_DEFAULT_REGION: us-east-1
     REPO_URI: 913617601626.dkr.ecr.us-east-1.amazonaws.com/my-ecs-repo
