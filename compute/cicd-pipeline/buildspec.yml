@@ -27,10 +27,10 @@ phases:
       - docker push $REPO_URI:$IMAGE_TAG
       - docker push $REPO_URI:latest
       - echo Writing image definitions file...
-      printf '[{"name":"my-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > ../../imagedefinitions.json
+      - printf '[{"name":"my-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
       - ls -l imagedefinitions.json
 
 artifacts:
   files:
-    - imagedefinitions.json
+    - compute/cicd-pipeline/imagedefinitions.json
 
