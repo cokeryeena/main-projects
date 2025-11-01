@@ -31,5 +31,5 @@ phases:
 
 artifacts:
   files:
-    - imagedefinitions.json
+    - compute/cicd-pipeline/imagedefinitions.json
 
