@@ -13,13 +13,15 @@ phases:
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $REPO_URI
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - echo Using image tag $IMAGE_TAG
+
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...
       - cd compute/cicd-pipeline
+      - echo Building the Docker image...
       - docker build -t $REPO_URI:$IMAGE_TAG .
       - docker tag $REPO_URI:$IMAGE_TAG $REPO_URI:latest
+
   post_build:
     commands:
       - echo Build completed on `date`
@@ -27,10 +29,12 @@ phases:
       - docker push $REPO_URI:$IMAGE_TAG
       - docker push $REPO_URI:latest
       - echo Writing image definitions file...
+      - cd ../..
       - printf '[{"name":"my-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
+      - echo "Generated imagedefinitions.json:"
+      - cat imagedefinitions.json
       - ls -l imagedefinitions.json
 
 artifacts:
   files:
-    - compute/cicd-pipeline/imagedefinitions.json
-
+    - imagedefinitions.json
