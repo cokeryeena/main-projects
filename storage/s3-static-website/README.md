@@ -44,8 +44,8 @@ An AWS account
 ## Screenshots
 Terraform Apply 
 
-![Terraform Apply](./screenshots/terraform_
-apply.png)
+![Terraform Apply](./screenshots/terraform_apply.png)
+
 Live Website
 
 ![Live Website](./screenshots/live-website.png)
