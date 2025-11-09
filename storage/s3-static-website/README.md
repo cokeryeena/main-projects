@@ -15,14 +15,12 @@ Perfect for learning Terraform’s S3 automation and simple cloud hosting workfl
 
 ## Infrastructure Components
 
-Resource	                          Description
-
-aws_s3_bucket	                        Stores website files
-aws_s3_bucket_website_configuration	Enables website hosting mode
-aws_s3_bucket_public_access_block	Disables public block restrictions
-aws_s3_bucket_policy	                Grants public read access
-aws_s3_object	                        Uploads static site files
-output	                                Displays website URL endpoint
+aws_s3_bucket	(Stores website files)
+aws_s3_bucket_website_configuration	(Enables website hosting mode)
+aws_s3_bucket_public_access_block	(Disables public block restrictions)
+aws_s3_bucket_policy (Grants public read access)
+aws_s3_object	 (Uploads static site files)
+output (Displays website URL endpoint)
 
 ## Files Structure
 s3-static-website/
