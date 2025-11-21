@@ -4,7 +4,7 @@
 This project demonstrates a fully automated **serverless workflow** on AWS.  
 When a file is uploaded to an S3 bucket, it triggers a Lambda function, which publishes a message to an SNS topic.  
 
-The SNS topic is subscribed to your **email**, so you receive notifications for every new file uploaded.  
+The SNS topic is subscribed to my **email**, so I receive notifications for every new file uploaded.  
 
 This setup highlights **event-driven architecture**, **serverless automation**, and practical **Terraform deployment**.
 
@@ -15,7 +15,7 @@ This setup highlights **event-driven architecture**, **serverless automation**, 
 1. File uploaded to **S3 Bucket**  
 2. S3 Event triggers **Lambda Function**  
 3. Lambda publishes a JSON message to **SNS Topic**  
-4. SNS sends a notification to your **email**
+4. SNS sends a notification to my **email**
 
 
 ## Features
