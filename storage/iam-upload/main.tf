@@ -49,8 +49,8 @@ resource "aws_iam_role_policy_attachment" "attach_policy" {
 
 # EC2 instance with IAM role
 resource "aws_instance" "ec2" {
-  ami           = "ami-0c02fb55956c7d316" # Amazon Linux 2
-  instance_type = "t2.micro"
+  ami           = "ami-00ca32bbc84273381"
+  instance_type = "t3.micro"
   iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   user_data = <<-EOF
