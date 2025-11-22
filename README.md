@@ -67,7 +67,7 @@ Covers:
 
 ** Security best practices
 
-If it touches S3, it’s in here.
+
 
 ## Technologies Used
 
@@ -115,12 +115,14 @@ Each project is self-contained and explains:
 
 ## Future Improvements
 
-Add CI/CD pipelines for each projects
+** Add CI/CD pipelines for each projects
 
-Add automated tests where possible
+** Add automated tests where possible
 
-Expand to networking and security projects
+** Expand to networking and security projects
 
-Add GitHub Actions for formatting/linting
+** Add GitHub Actions for formatting/linting
 
 ## Contributions
+This repo is mainly for personal learning and documentation.
+Pull requests and improvements are welcome.
