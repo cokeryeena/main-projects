@@ -1,9 +1,9 @@
-Main Projects Monorepo
+# Main Projects Monorepo
 
-Welcome to my DevOps Main Projects Monorepo, a single home for hands-on AWS, Linux, Bash, and automation projects.
-This repo is structured for learning,breaking and fixing, documentation, and showcasing real-world cloud engineering skills.
+### Welcome to my DevOps Main Projects Monorepo, a single home for hands-on AWS, Linux, Bash, and automation projects.
+### This repo is structured for learning,breaking and fixing, documentation, and showcasing real-world cloud engineering skills.
 
-Repository Structure
+## Repository Structure
 main-projects/
 
 ── compute/
