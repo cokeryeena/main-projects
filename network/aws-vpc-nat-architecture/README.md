@@ -33,12 +33,12 @@ networking/aws-vpc-nat-architecture/
 
 ## Deployment Steps
 1. Initialize Terraform:
-```bash
 terraform init
 terraform plan
 terraform apply
 
-
+2.
+terraform destroy
 
 ## Screenshots 
 
