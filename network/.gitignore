@@ -1,8 +1,4 @@
-# Terraform
 .terraform/
-.terraform.lock.hcl
-
-# SSH keys
 devops-key
 devops-key.pub
 *.pem
