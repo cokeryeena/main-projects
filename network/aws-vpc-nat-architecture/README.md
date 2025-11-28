@@ -43,20 +43,20 @@ terraform destroy
 ## Screenshots 
 
 1. **Terraform apply success** → `terraform apply` output  
-![Terraform Apply](apply-tf.png)
+![Terraform Apply](screenshots/apply-tf.png)
 
 2. **AWS Console VPC diagram** → show public/private subnets  
-![Subnets](subnets.png)
+![Subnets](screenshots/subnets.png)
 
 3. **EC2 instances list** → show bastion + private instance with correct subnet  
-![EC2 Instances](aws-instances.png)
+![EC2 Instances](screenshots/aws-instances.png)
 
 4. **SSH into bastion** → screenshot terminal  
-![Bastion](ssh-bastion.png)
+![Bastion](screenshots/ssh-bastion.png)
 
 5. **SSH from bastion → private** 
-![Bastion-Private](bastion-private.png)
+![Bastion-Private](screenshots/bastion-private.png)
   
 6. **Curl test from private EC2** → screenshot terminal  
-![Curl test](curl.png)
+![Curl test](screenshots/curl.png)
 
