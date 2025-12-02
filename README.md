@@ -67,11 +67,18 @@ Covers:
 
 - Security best practices
 
+#3. Network Projects
+
+- Public subnet (Internet access via IGW)
+- Private subnet (Outbound access via NAT)
+- Bastion host (SSH entry point to private EC2)
+- Security groups enforce least-privilege access
+- Terraform Structure
 
 
 ## Technologies Used
 
-- AWS (EC2, S3, Lambda, IAM, CloudWatch, SNS)
+- AWS (EC2, S3, Lambda, IAM, CloudWatch, SNS, VPC)
 
 - Terraform (IAC for reproducible setups)
 
