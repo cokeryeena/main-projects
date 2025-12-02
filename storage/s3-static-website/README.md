@@ -23,13 +23,13 @@ aws_s3_object	 (Uploads static site files)
 output (Displays website URL endpoint)
 
 ## Files Structure
-s3-static-website/
-├── main.tf          # Terraform resources
-├── variables.tf     # Variables (optional)
-├── outputs.tf       # Website endpoint output
-├── index.html       # Home page
-├── error.html       # Error page
-└── README.md        # Documentation
+**s3-static-website/
+- main.tf          # Terraform resources
+- variables.tf     # Variables
+- outputs.tf       # Website endpoint output
+- index.html       # Home page
+- error.html       # Error page
+- README.md        # Documentation
 
 ## Prerequisites
 

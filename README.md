@@ -6,18 +6,18 @@
 ## Repository Structure
 main-projects/
 
-── compute/
-  ── autoscaling-webapp/
-  ── cicd-pipeline/
-  ── ec2-userdata/ 
-  ── ec2-deployment/
-  ── lambda-image-resize/
+**compute/
+- autoscaling-webapp/
+- cicd-pipeline/
+- ec2-userdata/ 
+- ec2-deployment/
+- lambda-image-resize/
        
 
-── storage/
-   ── iam-upload/
-   ── s3-lambda-sns-automation/
-   ── s3-static-website/
+**storage/
+- iam-upload/
+- s3-lambda-sns-automation/
+- s3-static-website/
        
 
 
@@ -37,17 +37,17 @@ Clear documentation of steps, architecture, and testing
 
 Focused on:
 
-** EC2 provisioning
+- EC2 provisioning
 
-** User data scripts
+- User data scripts
 
-** Web server deployments
+- Web server deployments
 
-** Lambda automations
+- Lambda automations
 
-** IAM roles & permissions
+- IAM roles & permissions
 
-** Terraform infrastructure as code
+- Terraform infrastructure as code
 
 These projects show the fundamentals every cloud engineer should know
 
@@ -55,33 +55,33 @@ These projects show the fundamentals every cloud engineer should know
 
 Covers:
 
-** S3 bucket setup
+- S3 bucket setup
 
-** Public & private access patterns
+- Public & private access patterns
 
-** IAM policies for uploads
+- IAM policies for uploads
 
-** Static website hosting
+- Static website hosting
 
-** Event-driven automation with S3 → Lambda → SNS
+- Event-driven automation with S3 → Lambda → SNS
 
-** Security best practices
+- Security best practices
 
 
 
 ## Technologies Used
 
-** AWS (EC2, S3, Lambda, IAM, CloudWatch, SNS)
+- AWS (EC2, S3, Lambda, IAM, CloudWatch, SNS)
 
-** Terraform (IAC for reproducible setups)
+- Terraform (IAC for reproducible setups)
 
-** Bash scripting
+- Bash scripting
 
-** Linux server administration
+- Linux server administration
 
-** Git & GitHub
+- Git & GitHub
 
-** Python (for Lambda functions)
+- Python (for Lambda functions)
 
 ## How to Use This Monorepo
 
@@ -89,39 +89,33 @@ Follow the README for each project
 
 Each project is self-contained and explains:
 
-** Architecture
+- Architecture
 
-** Prerequisites
+- Process
 
-** Setup steps
+- Setup steps
 
-** Testing
+- Testing
 
-** Screenshots
+- Screenshots
 
 ## Why a Monorepo?
 
-** Keeps all projects in one clean place
+- Keeps all my projects in one clean place
 
-** Makes navigation easier
+- Makes navigation easier
 
-** Encourages consistent documentation
-
-** Perfect for recruiters reviewing cloud engineering work
-
-** Great for portfolio building and long-term growth
+- Consistent documentation
 
 
 
 ## Future Improvements
 
-** Add CI/CD pipelines for each projects
+- Add CI/CD pipelines for every projects
 
-** Add automated tests where possible
+- Add automated tests where possible
 
-** Expand to networking and security projects
-
-** Add GitHub Actions for formatting/linting
+- Expand to networking and security projects
 
 ## Contributions
 This repo is mainly for personal learning and documentation.
