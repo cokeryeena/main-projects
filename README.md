@@ -67,7 +67,7 @@ Covers:
 
 - Security best practices
 
-#3. Network Projects
+# 3. Network Projects
 
 - Public subnet (Internet access via IGW)
 - Private subnet (Outbound access via NAT)
